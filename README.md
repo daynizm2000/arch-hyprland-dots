@@ -102,10 +102,8 @@ The following packages are required. Please install them using your preferred AU
 ## Customisation & Caveats
 The following items require adjustment according to your specific hardware and preferences:
 
-- **Monitor:** My `hyprland.conf` references `DP-2, 2560x1440@240`. Execute `hyprctl monitors` to determine your display identifier and update the configuration accordingly.
 - **GPU temperature:** The Waybar script relies on `nvidia-smi`. If you use an AMD or Intel GPU, replace `~/.config/waybar/scripts/gpu.sh` or remove the module.
 - **Keyboard layout:** `us,ru` with Alt+Shift switching. Modify the `input` section in `hyprland.conf` to match your own layouts.
-- **Wallpaper:** Replace `~/.config/hypr/wallpapers/output.mp4` with your own file (or switch back to `mpvpaper` – see the commented line).
 - **Screen recording:** The provided script uses `gpu-screen-recorder`. You may substitute it with OBS or `wf-recorder` if preferred.
 - **VSCode theme:** My settings reference `"Dark Purple"` and the icon pack `"Elkrien's Dark Purple Icons"`. These must be installed manually from the VSCode Marketplace.
 - **Neovim LSP:** Servers (`clangd`, `pyright`, `bashls`) are installed automatically by Mason. Please ensure that `npm` and `unzip` are available on your system.
@@ -220,10 +218,8 @@ Please remember to install the actual colour theme and icon pack as well.
 ## Настройка под ваше оборудование
 Следующие параметры необходимо изменить в соответствии с вашей системой и предпочтениями:
 
-- **Монитор:** В файле `hyprland.conf` указан `DP-2, 2560x1440@240`. Выполните `hyprctl monitors`, чтобы узнать имя вашего дисплея, и поправьте соответствующую строку.
 - **Температура GPU:** Скрипт для Waybar ожидает наличие `nvidia-smi`. При использовании видеокарт AMD или Intel замените `~/.config/waybar/scripts/gpu.sh` или уберите этот модуль.
 - **Раскладка клавиатуры:** `us,ru` с переключением по Alt+Shift. Измените секцию `input` в `hyprland.conf` на свои языки.
-- **Обои:** Замените файл `~/.config/hypr/wallpapers/output.mp4` на свой или раскомментируйте строку с `mpvpaper` для использования альтернативного способа.
 - **Запись экрана:** По умолчанию применяется `gpu-screen-recorder`. При желании вы можете заменить его на `wf-recorder` или OBS.
 - **Тема VSCode:** В настройках указана тема `"Dark Purple"` и набор иконок `"Elkrien's Dark Purple Icons"`. Их необходимо самостоятельно установить из маркетплейса.
 - **Neovim LSP:** Серверы (`clangd`, `pyright`, `bashls`) устанавливаются автоматически через Mason. Убедитесь, что в системе присутствуют `npm` и `unzip`.
