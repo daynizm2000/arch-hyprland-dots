@@ -1,5 +1,5 @@
 <h1 align="center">Arch Linux Hyprland Dotfiles</h1>
-<h3 align="center">Единый тёмно-фиолетовый конфиг для Arch Linux</h3>
+<h3 align="center">Unified dark purple config for Arch Linux</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/WM-Hyprland-blue?style=flat-square" />
