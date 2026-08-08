@@ -1,4 +1,3 @@
-```markdown
 <h1 align="center">Arch Linux Hyprland Dotfiles</h1>
 <h3 align="center">Unified dark‑purple rice for Arch Linux</h3>
 
