@@ -11,6 +11,7 @@
         "editor.autoClosingBrackets": "always",
         "editor.tabSize": 8
     },
+
     "C_Cpp.intelliSenseEngine": "disabled",
     "C_Cpp.autoclosingBrackets": true,
     
@@ -65,7 +66,7 @@
     "window.menuBarVisibility": "hidden",
     "window.customTitleBarVisibility": "never",
     "window.titleBarStyle": "native",
-    "workbench.iconTheme": "catppuccin noctis icons",
+    "workbench.iconTheme": "dark-purple-icons",
     "editor.tabSize": 4,
     "editor.guides.indentation": true,
     "workbench.colorTheme": "Dark Purple",
