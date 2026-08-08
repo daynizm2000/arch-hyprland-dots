@@ -1,5 +1,5 @@
 <h1 align="center">Arch Linux Hyprland Dotfiles</h1>
-<h3 align="center">Unified dark‑purple rice for Arch Linux</h3>
+<h3 align="center">Единый тёмно-фиолетовый конфиг для Arch Linux</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/WM-Hyprland-blue?style=flat-square" />
@@ -9,12 +9,11 @@
 
 ---
 
-<!-- Language switcher -->
 <details open>
 <summary>English</summary>
 
 ## Overview
-This repository contains my personal **Hyprland** configuration for Arch Linux, built around a consistent dark‑purple palette. Every component — from the window manager and status bar to the launcher, notifications, and code editor — follows the same colour scheme, creating a smooth and cohesive desktop experience.
+This repository contains my personal **Hyprland** configuration for Arch Linux, built around a consistent dark‑purple palette. Every component — the window manager, status bar, launcher, notifications, and code editor — adheres to the same colour scheme, delivering a cohesive and polished desktop experience.
 
 ## Screenshots
 
@@ -31,10 +30,10 @@ This repository contains my personal **Hyprland** configuration for Arch Linux, 
 - **Status Bar:** Waybar with custom modules (keyboard layout, GPU temperature, package updates, night‑mode toggle, etc.).
 - **Launcher:** Rofi – application and window switcher, fully themed.
 - **Notifications:** SwayNC – notification daemon and control center.
-- **OSD:** SwayOSD – volume / brightness popups.
-- **Logout Menu:** Wlogout – clean session management menu.
+- **OSD:** SwayOSD – volume and brightness pop‑ups.
+- **Logout Menu:** Wlogout – clean session management interface.
 - **Terminal:** Kitty – pure purple colour scheme, Nerd Font icons.
-- **Code Editor:** Neovim – Lazy.nvim, LSP, completion, transparent purple theme (no external plugin needed for colours).
+- **Code Editor:** Neovim – Lazy.nvim, LSP, completion, transparent purple theme (no external plugin required for colours).
 - **System Fetch:** Fastfetch – custom ASCII logo and module layout.
 - **Theming:** Kvantum (Qt), custom GTK theme (icons & theme folders), matching VSCode theme (external, must be installed separately).
 - **Cursor:** Bibata Modern Classic Total Purple.
@@ -42,7 +41,7 @@ This repository contains my personal **Hyprland** configuration for Arch Linux, 
 - **Wallpaper & Recording:** Hyprpaper, GPU screen‑recording script.
 
 ## Dependencies
-Here’s what you need. Install with your favourite AUR helper (e.g. `yay`).
+The following packages are required. Please install them using your preferred AUR helper (e.g., `yay`).
 
 ### Core
 - `hyprland`
@@ -77,8 +76,8 @@ Here’s what you need. Install with your favourite AUR helper (e.g. `yay`).
 - `ttf-iosevka-nerd`
 
 ## Installation
-1. **Back up** your current configs.
-2. Clone this repo:
+1. **Back up** your current configuration files.
+2. Clone this repository:
    ```bash
    git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
    ```
@@ -90,41 +89,41 @@ Here’s what you need. Install with your favourite AUR helper (e.g. `yay`).
    cp ~/dotfiles/.zshrc ~/.zshrc
    cp ~/dotfiles/.p10k.zsh ~/.p10k.zsh
    ```
-   > **Using GNU Stow?** `cd ~/dotfiles && stow .` will symlink everything automatically.
-4. **Apply the GTK theme** with `nwg-look` or by editing `~/.config/gtk-3.0/settings.ini` / `gtk-4.0/settings.ini`.
+   > **If you use GNU Stow:** `cd ~/dotfiles && stow .` will symlink everything automatically.
+4. **Apply the GTK theme** using `nwg-look` or by editing `~/.config/gtk-3.0/settings.ini` / `gtk-4.0/settings.ini`.
 5. **Set the cursor:**
    ```bash
    hyprctl setcursor Bibata-Modern-Classic-TotalPurple 14
    ```
-6. **Install missing fonts** (see dependencies above).
-7. **VSCode users:** Read the [VSCode section](#vscode).
+6. **Install any missing fonts** (see the dependencies list above).
+7. **For VSCode users:** Please read the [VSCode section](#vscode).
 8. Reboot or restart your session.
 
 ## Customisation & Caveats
-These are things you **must** adjust for your machine:
+The following items require adjustment according to your specific hardware and preferences:
 
-- **Monitor:** My `hyprland.conf` uses `DP-2, 2560x1440@240`. Run `hyprctl monitors` to get your display name and change it.
-- **GPU temperature:** The Waybar script relies on `nvidia-smi`. If you have an AMD / Intel GPU, replace `~/.config/waybar/scripts/gpu.sh` or remove the module.
-- **Keyboard layout:** `us,ru` with Alt+Shift switching. Modify the `input` section in `hyprland.conf`.
-- **Wallpaper:** Replace `~/.config/hypr/wallpapers/output.mp4` with your own (or switch back to `mpvpaper` – see the commented line).
-- **Screen recording:** The script uses `gpu-screen-recorder`. Change it if you prefer OBS or `wf-recorder`.
-- **VSCode theme:** My settings reference `"Dark Purple"` and icon pack `"Elkrien's Dark Purple Icons"`. You must install them manually from the VSCode Marketplace.
-- **Neovim LSP:** Servers (`clangd`, `pyright`, `bashls`) are auto‑installed by Mason. Make sure you have `npm` and `unzip`.
-- **Zsh config:** If you don’t use Zsh or Powerlevel10k, just ignore `.zshrc` and `.p10k.zsh`.
+- **Monitor:** My `hyprland.conf` references `DP-2, 2560x1440@240`. Execute `hyprctl monitors` to determine your display identifier and update the configuration accordingly.
+- **GPU temperature:** The Waybar script relies on `nvidia-smi`. If you use an AMD or Intel GPU, replace `~/.config/waybar/scripts/gpu.sh` or remove the module.
+- **Keyboard layout:** `us,ru` with Alt+Shift switching. Modify the `input` section in `hyprland.conf` to match your own layouts.
+- **Wallpaper:** Replace `~/.config/hypr/wallpapers/output.mp4` with your own file (or switch back to `mpvpaper` – see the commented line).
+- **Screen recording:** The provided script uses `gpu-screen-recorder`. You may substitute it with OBS or `wf-recorder` if preferred.
+- **VSCode theme:** My settings reference `"Dark Purple"` and the icon pack `"Elkrien's Dark Purple Icons"`. These must be installed manually from the VSCode Marketplace.
+- **Neovim LSP:** Servers (`clangd`, `pyright`, `bashls`) are installed automatically by Mason. Please ensure that `npm` and `unzip` are available on your system.
+- **Zsh configuration:** If you do not use Zsh or Powerlevel10k, you may safely ignore `.zshrc` and `.p10k.zsh`.
 
 ## VSCode
-Copy `vscode-settings/settings.json` into your own VSCode user settings (`~/.config/Code/User/settings.json` on Linux). It configures:
-- Font family & size
-- Workbench colours matching the purple palette
-- A list of recommended extensions (you still need to install them from the Marketplace)
+Copy `vscode-settings/settings.json` into your own VSCode user settings (`~/.config/Code/User/settings.json` on Linux). This file configures:
+- Font family and size
+- Workbench colours aligned with the purple palette
+- A list of recommended extensions (these must still be installed from the Marketplace)
 
-Don’t forget to install the actual colour theme and icon pack!
+Please remember to install the actual colour theme and icon pack as well.
 
 ## Troubleshooting
-- **Waybar GPU → “ERR”:** Check that `nvidia-smi` works and Nvidia drivers are loaded.
-- **Rofi no icons:** Install an icon theme (e.g. `colloid-icon-theme`) and set it in `~/.config/rofi/config.rasi`.
-- **Notifications not showing:** Make sure `swaync` is running (`systemctl --user status swaync`).
-- **Missing glyphs (squares):** Install the required Nerd Fonts and restart applications.
+- **Waybar GPU → “ERR”:** Verify that `nvidia-smi` functions correctly and that the Nvidia drivers are loaded.
+- **Rofi missing icons:** Install an icon theme (e.g., `colloid-icon-theme`) and set it in `~/.config/rofi/config.rasi`.
+- **Notifications not appearing:** Ensure that the `swaync` daemon is running (`systemctl --user status swaync`).
+- **Missing glyphs (squares):** Install the required Nerd Fonts and restart the affected applications.
 
 ---
 
@@ -132,7 +131,7 @@ Don’t forget to install the actual colour theme and icon pack!
 <summary>Русский</summary>
 
 ## Обзор
-Этот репозиторий содержит мою конфигурацию **Hyprland** для Arch Linux, выполненную в единой тёмно‑фиолетовой гамме. Все элементы — оконный менеджер, панель, лаунчер, уведомления и редактор — придерживаются общей цветовой схемы, создавая целостный и приятный рабочий стол.
+Данный репозиторий содержит мою персональную конфигурацию **Hyprland** для Arch Linux, выполненную в единой тёмно-фиолетовой гамме. Все компоненты — оконный менеджер, панель, лаунчер, уведомления и редактор — придерживаются общей цветовой схемы, что обеспечивает целостное и аккуратное рабочее окружение.
 
 ## Скриншоты
 
@@ -146,32 +145,32 @@ Don’t forget to install the actual colour theme and icon pack!
 
 ## Возможности
 - **Оконный менеджер:** Hyprland — анимации, размытие, прозрачность, динамические рабочие столы.
-- **Панель:** Waybar с кастомными модулями (раскладка клавиатуры, температура GPU, обновления, ночной режим и др.).
-- **Лаунчер:** Rofi — переключение окон и запуск приложений, полностью стилизован.
+- **Панель:** Waybar с дополнительными модулями (раскладка клавиатуры, температура GPU, обновления пакетов, ночной режим и т. д.).
+- **Лаунчер:** Rofi — переключение окон и запуск приложений, полностью стилизованный.
 - **Уведомления:** SwayNC — демон уведомлений и центр управления.
-- **OSD:** SwayOSD — индикаторы громкости / яркости.
-- **Меню выхода:** Wlogout — чистый интерфейс для завершения сеанса.
-- **Терминал:** Kitty — чисто‑фиолетовая тема, иконки Nerd Font.
-- **Редактор кода:** Neovim — Lazy.nvim, LSP, автодополнение, прозрачная фиолетовая тема (без внешних плагинов).
+- **OSD:** SwayOSD — индикаторы громкости и яркости.
+- **Меню выхода:** Wlogout — лаконичный интерфейс для завершения сеанса.
+- **Терминал:** Kitty — чистая фиолетовая цветовая схема, иконки Nerd Font.
+- **Редактор кода:** Neovim — Lazy.nvim, LSP, автодополнение, прозрачная фиолетовая тема (без необходимости в сторонних плагинах для цветов).
 - **Системная информация:** Fastfetch — кастомный ASCII‑логотип и расположение модулей.
-- **Темизация:** Kvantum (Qt), GTK‑тема (иконки и папки с темами), подходящая тема VSCode (устанавливается отдельно).
+- **Темизация:** Kvantum (Qt), пользовательская GTK‑тема (папки с иконками и темами), согласованная тема VSCode (устанавливается отдельно).
 - **Курсор:** Bibata Modern Classic Total Purple.
 - **Шрифты:** JetBrainsMono Nerd Font, Iosevka Nerd Font.
-- **Обои и запись:** Hyprpaper, скрипт записи экрана через GPU.
+- **Обои и запись экрана:** Hyprpaper, скрипт записи экрана через GPU.
 
 ## Зависимости
-Установите следующие пакеты (через `yay` или другой AUR‑хелпер).
+Для работы потребуются следующие пакеты. Пожалуйста, установите их с помощью вашего AUR‑помощника (например, `yay`).
 
 ### Ядро
 - `hyprland`
 - `waybar`
-- `rofi-lbonn-wayland` *(или обычный `rofi`)*
+- `rofi-lbonn-wayland` *(или стандартный `rofi`)*
 - `swaync`
 - `swayosd`
 - `wlogout`
 - `kitty`
 - `fastfetch`
-- `neovim` *(опционально, но рекомендовано)*
+- `neovim` *(опционально, но рекомендуется)*
 - `qt5ct` `qt6ct`
 - `kvantum`
 - `nwg-look` *(переключатель GTK‑тем)*
@@ -195,12 +194,12 @@ Don’t forget to install the actual colour theme and icon pack!
 - `ttf-iosevka-nerd`
 
 ## Установка
-1. **Сделайте резервную копию** текущих конфигов.
+1. **Создайте резервную копию** ваших текущих конфигурационных файлов.
 2. Клонируйте репозиторий:
    ```bash
    git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
    ```
-3. Скопируйте (или создайте симлинки):
+3. Скопируйте (или создайте символьные ссылки):
    ```bash
    cp -r ~/dotfiles/.config/* ~/.config/
    cp -r ~/dotfiles/.local/share/icons ~/.local/share/
@@ -208,36 +207,38 @@ Don’t forget to install the actual colour theme and icon pack!
    cp ~/dotfiles/.zshrc ~/.zshrc
    cp ~/dotfiles/.p10k.zsh ~/.p10k.zsh
    ```
-   > **Если пользуетесь GNU Stow:** `cd ~/dotfiles && stow .` автоматически расставит симлинки.
-4. **Примените GTK‑тему** через `nwg-look` или вручную в `~/.config/gtk-3.0/settings.ini` / `gtk-4.0/settings.ini`.
+   > **Если вы используете GNU Stow:** `cd ~/dotfiles && stow .` автоматически создаст все необходимые симлинки.
+4. **Примените GTK‑тему** с помощью `nwg-look` или вручную отредактировав файлы `~/.config/gtk-3.0/settings.ini` и `gtk-4.0/settings.ini`.
 5. **Установите курсор:**
    ```bash
    hyprctl setcursor Bibata-Modern-Classic-TotalPurple 14
    ```
-6. **Установите недостающие шрифты** (см. зависимости).
-7. **Для VSCode:** прочтите [раздел VSCode](#vscode-1).
+6. **Установите недостающие шрифты** (см. список зависимостей выше).
+7. **Пользователям VSCode:** пожалуйста, ознакомьтесь с разделом [VSCode](#vscode-1).
 8. Перезагрузите сеанс.
 
-## Настройка и что стоит изменить под себя
-- **Монитор:** В `hyprland.conf` указан `DP-2, 2560x1440@240`. Узнайте свой дисплей командой `hyprctl monitors` и поправьте строку.
-- **Температура GPU:** Скрипт Waybar рассчитан на `nvidia-smi`. Если у вас AMD/Intel, замените `~/.config/waybar/scripts/gpu.sh` или уберите модуль.
-- **Раскладка клавиатуры:** `us,ru` с переключением по Alt+Shift. Измените секцию `input` в `hyprland.conf` под свои языки.
-- **Обои:** Замените `~/.config/hypr/wallpapers/output.mp4` или раскомментируйте строку с `mpvpaper`.
-- **Запись экрана:** По умолчанию используется `gpu-screen-recorder`. При желании замените на `wf-recorder` или OBS.
-- **Тема VSCode:** В настройках указана тема `"Dark Purple"` и иконки `"Elkrien's Dark Purple Icons"`. Их необходимо самостоятельно установить из маркетплейса.
-- **Neovim LSP:** Серверы (`clangd`, `pyright`, `bashls`) ставятся автоматически через Mason. Убедитесь, что в системе есть `npm` и `unzip`.
-- **Zsh:** Если вы не пользуетесь Zsh или Powerlevel10k, просто игнорируйте `.zshrc` и `.p10k.zsh`.
+## Настройка под ваше оборудование
+Следующие параметры необходимо изменить в соответствии с вашей системой и предпочтениями:
+
+- **Монитор:** В файле `hyprland.conf` указан `DP-2, 2560x1440@240`. Выполните `hyprctl monitors`, чтобы узнать имя вашего дисплея, и поправьте соответствующую строку.
+- **Температура GPU:** Скрипт для Waybar ожидает наличие `nvidia-smi`. При использовании видеокарт AMD или Intel замените `~/.config/waybar/scripts/gpu.sh` или уберите этот модуль.
+- **Раскладка клавиатуры:** `us,ru` с переключением по Alt+Shift. Измените секцию `input` в `hyprland.conf` на свои языки.
+- **Обои:** Замените файл `~/.config/hypr/wallpapers/output.mp4` на свой или раскомментируйте строку с `mpvpaper` для использования альтернативного способа.
+- **Запись экрана:** По умолчанию применяется `gpu-screen-recorder`. При желании вы можете заменить его на `wf-recorder` или OBS.
+- **Тема VSCode:** В настройках указана тема `"Dark Purple"` и набор иконок `"Elkrien's Dark Purple Icons"`. Их необходимо самостоятельно установить из маркетплейса.
+- **Neovim LSP:** Серверы (`clangd`, `pyright`, `bashls`) устанавливаются автоматически через Mason. Убедитесь, что в системе присутствуют `npm` и `unzip`.
+- **Zsh:** Если вы не пользуетесь Zsh или Powerlevel10k, файлы `.zshrc` и `.p10k.zsh` можно проигнорировать.
 
 ## VSCode
-Скопируйте `vscode-settings/settings.json` в свои пользовательские настройки (`~/.config/Code/User/settings.json`). Внутри:
-- Настройки шрифтов
-- Цветовая схема рабочей области в тон общей палитре
-- Список рекомендуемых расширений (их всё равно нужно установить вручную из магазина)
+Скопируйте `vscode-settings/settings.json` в ваши пользовательские настройки VSCode (`~/.config/Code/User/settings.json` в Linux). В файле содержатся:
+- Параметры шрифтов
+- Цвета рабочей области, соответствующие фиолетовой палитре
+- Список рекомендованных расширений (их всё равно нужно установить вручную из магазина)
 
-Не забудьте установить саму тему и пакет иконок!
+Не забудьте также установить саму цветовую тему и набор иконок.
 
 ## Решение проблем
-- **Waybar пишет “ERR” у GPU:** Проверьте, работает ли `nvidia-smi` и загружены ли драйверы.
-- **Rofi без иконок:** Установите тему иконок (например, `colloid-icon-theme`) и пропишите её в `config.rasi`.
-- **Нет уведомлений:** Убедитесь, что демон `swaync` запущен (`systemctl --user status swaync`).
-- **Квадратики вместо символов:** Установите указанные Nerd Fonts и перезапустите приложения.
+- **Waybar отображает “ERR” для GPU:** Проверьте, что утилита `nvidia-smi` работает корректно и драйверы Nvidia загружены.
+- **В Rofi отсутствуют иконки:** Установите тему иконок (например, `colloid-icon-theme`) и пропишите её в `~/.config/rofi/config.rasi`.
+- **Уведомления не появляются:** Удостоверьтесь, что демон `swaync` запущен (`systemctl --user status swaync`).
+- **Квадраты вместо символов:** Установите необходимые Nerd Fonts и перезапустите приложения.
