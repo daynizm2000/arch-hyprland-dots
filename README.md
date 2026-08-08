@@ -79,7 +79,7 @@ The following packages are required. Please install them using your preferred AU
 1. **Back up** your current configuration files.
 2. Clone this repository:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+   git clone https://github.com/daynizm2000/arch-hyprland-dots.git ~/dotfiles
    ```
 3. Copy (or symlink) the files:
    ```bash
@@ -195,7 +195,7 @@ Please remember to install the actual colour theme and icon pack as well.
 1. **Создайте резервную копию** ваших текущих конфигурационных файлов.
 2. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
+   git clone https://github.com/daynizm2000/arch-hyprland-dots.git ~/dotfiles
    ```
 3. Скопируйте (или создайте символьные ссылки):
    ```bash
