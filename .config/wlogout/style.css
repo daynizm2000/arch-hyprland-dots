@@ -1,0 +1,53 @@
+* {
+  background-image: none;
+  box-shadow: none;
+}
+
+window {
+  background-color: rgba(6, 3, 13, 0.75);
+}
+
+button {
+  border-radius: 12px;
+  border-color: black;
+  margin: 8px;
+  text-decoration-color: #7F70FF;
+  color: #7F70FF;
+  background-color: rgba(6, 3, 13, 0.75);
+  border-style: solid;
+  border-width: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+
+button:focus,
+button:active,
+button:hover {
+  background-color: #3700B3;
+  outline-style: none;
+}
+
+#lock {
+  background-image: url("./icons/lock.png");
+}
+
+#logout {
+  background-image: url("./icons/logout.png");
+}
+
+#suspend {
+  background-image: url("./icons/suspend.png");
+}
+
+#hibernate {
+  background-image: url("./icons/hibernate.png");
+}
+
+#shutdown {
+  background-image: url("./icons/shutdown.png");
+}
+
+#reboot {
+  background-image: url("./icons/reboot.png");
+}

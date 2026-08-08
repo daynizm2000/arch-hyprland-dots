@@ -1,0 +1,37 @@
+* {
+    font-family: "Iosevka Medium Nerd Font", "Iosevka Nerd Font";
+    font-size: 18px;
+}
+
+window#osd { 
+    background-color: rgba(6, 3, 13, 0.75);
+    color: #5A2EFF;
+
+    border-radius: 22px;                  
+    border: 0px solid #6C57FF80;          
+    
+    
+    box-shadow: none;
+}
+
+#container image {
+    color: #5A2EFF;                         
+    -gtk-icon-size: 48px;                   
+}
+
+progressbar {
+    background-color: rgba(127, 112, 255, 0.2); 
+    border-radius: 22px;
+    min-height: 6px;
+    margin-top: 10px;
+}
+
+progressbar trough {
+    background-color: transparent;
+    border-radius: 22px;
+}
+
+progressbar progress {
+    background: linear-gradient(90deg, #5A2EFF, #7F70FF);
+    border-radius: 22px;
+}

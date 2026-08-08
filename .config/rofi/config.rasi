@@ -1,0 +1,184 @@
+@theme "/dev/null"
+@import "colors.rasi"
+
+configuration {
+	modi: "window,run,drun";
+	display-drun: "Applications";
+	display-window: "Windows";
+	display-run: "Run";
+	drun-display-format: "{icon} {name}";
+	font: "Iosevka Nerd Font 14";
+	show-icons: true;
+	icon-theme: "Colloid";
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       1000px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    border:			0px solid;
+    border-color:		#5A2EFF;
+    border-radius:               20px;
+    cursor:                      "default";
+    background-color:            rgba(6, 3, 13, 0.85);
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 horizontal;
+    children:                    [ "imagebox", "listbox" ];
+}
+
+imagebox {
+    padding:                     20px;
+    background-color:            transparent;
+    background-image:            url("~/", height);
+    orientation:                 vertical;
+    children:                    [ "inputbar", "dummy", "mode-switcher" ];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:		rgba(6, 3, 13, 0.85);
+    text-color:			rgba(90, 46, 255, 0.9);
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "  ";
+    background-color:            rgba(255, 255, 255, 0);
+    text-color:                  rgba(127, 112, 255, 0.9);
+}
+entry {
+    enabled:                     true;
+    background-color:            rgba(255, 255, 255, 0);
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Search";
+    placeholder-color:           rgba(90, 46, 255, 0.6);
+}
+
+mode-switcher{
+    enabled:                     true;
+    spacing:                     20px;
+    background-color:            transparent;
+    text-color:                  rgba(127, 112, 255, 0.9);
+}
+button {
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            rgba(6, 3, 13, 0.85);
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            rgba(127, 112, 255, 0.8);
+    text-color:                  rgba(6, 3, 13, 0.9);
+}
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       8;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  rgba(90, 46, 255, 0.9);
+    cursor:                      "default";
+}
+
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     8px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  rgba(90, 46, 255, 0.9);
+    cursor:                      pointer;
+}
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  inherit;
+}
+element normal.urgent {
+    background-color:            rgba(127, 112, 255, 0.8);
+    text-color:                  rgba(6, 3, 13, 0.9);
+}
+element normal.active {
+    background-color:            rgba(90, 46, 255, 0.2);
+    text-color:                  rgba(6, 3, 13, 0.9);
+}
+element selected.normal {
+    background-color:            rgba(127, 112, 255, 0.8);
+    text-color:                  rgba(6, 3, 13, 0.85);
+}
+element selected.urgent {
+    background-color:            rgba(127, 112, 255, 0.8);
+    text-color:                  rgba(6, 3, 13, 0.85);
+}
+element selected.active {
+    background-color:            rgba(127, 112, 255, 0.8);
+    text-color:                  rgba(6, 3, 13, 0.9);
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+
+message {
+    background-color:            transparent;
+}
+textbox {
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            rgba(6, 3, 13, 0.85);
+    text-color:                  rgba(90, 46, 255, 0.9);
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               20px;
+    background-color:            rgba(6, 3, 13, 0.85);
+    text-color:                  rgba(90, 46, 255, 0.9);
+}
