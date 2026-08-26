@@ -80,7 +80,7 @@ tooltip calendar {
 #custom-nightmode,
 #network,
 #custom-power,
-#custom-keyboard,
+#language,
 #memory,
 #cpu,
 #custom-gpu,
@@ -92,6 +92,10 @@ tooltip calendar {
 
 #custom-arch {
   font-size: 28px;
+}
+
+#language {
+  font-size: 20px;
 }
 
 #custom-notification,

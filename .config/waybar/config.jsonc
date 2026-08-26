@@ -11,18 +11,18 @@
 
 	"modules-left": ["custom/sep", "custom/sep", "custom/arch", "custom/sep", "custom/sep", "custom/updates", "custom/sep", "custom/sep", "custom/nightmode", "custom/sep", "tray", "custom/sep", "custom/sep", "memory", "custom/sep", "cpu", "custom/sep", "custom/gpu"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["network", "custom/sep", "custom/keyboard", "pulseaudio#microphone", "pulseaudio", "custom/sep", "clock", "custom/sep", "custom/notification", "custom/sep", "custom/power", "custom/sep", "custom/sep", "custom/sep"],
+	"modules-right": ["network", "custom/sep", "hyprland/language", "pulseaudio#microphone", "pulseaudio", "custom/sep", "clock", "custom/sep", "custom/notification", "custom/sep", "custom/power", "custom/sep", "custom/sep", "custom/sep"],
 
 	"custom/sep": {
 		"format": " "
 	},
 
-	"custom/keyboard": {
-		"format": "<span color='#5A2EFF'>󰌌</span> {}",
-		"exec": "~/.config/waybar/scripts/keyboard.sh",
-		"return-type": "json",
-		"interval": 1
-	},
+	"hyprland/language": {
+                "format": "<span color='#5A2EFF'>󰌌</span> {}",
+                "format-en": "us",
+                "format-ru": "ru",
+                //"keyboard-name": "gaming-kb-gaming-kb"
+        },
 
 	"pulseaudio#microphone": {
     		"format": "{format_source}",
