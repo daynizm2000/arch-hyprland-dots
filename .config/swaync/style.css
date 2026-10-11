@@ -3,7 +3,7 @@
   --kitty-fg: #5A2EFF;
   --kitty-accent: #7F70FF;
   --kitty-white: #a78bfa;
-  --bg-transparent: rgba(6, 3, 13, 0.80);
+  --bg-transparent: rgba(6, 3, 13, 0.85);
   --fg-80: rgba(90, 46, 255, 0.8);
   --fg-60: rgba(90, 46, 255, 0.6);
   --white-20: rgba(208, 208, 224, 0.2);
@@ -52,9 +52,9 @@
 }
 
 .time {
-  color: var(--white-40);
+  color: var(--kitty-accent);
   font-size: 11px;
-  font-weight: normal;
+  font-weight: bold;
   margin-left: 8px;
 }
 
@@ -325,3 +325,17 @@ scrollbar slider {
 .notification-row .notification-background .notification .notification-action button:hover label {
   color: var(--kitty-bg);
 }
+
+.control-center .notification-row .notification-background .notification {
+  background-color: var(--kitty-bg);
+  border: 2px solid rgba(127, 112, 255, 0.30);
+  border-radius: var(--radius);
+  padding: var(--padding);
+  margin: 4px 6px;
+  box-shadow: none;
+}
+
+.control-center .notification-row .notification-background .notification:hover {
+  border-color: rgba(127, 112, 255, 0.60);
+}
+

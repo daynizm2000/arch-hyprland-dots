@@ -8447,6 +8447,11 @@ themeswitcher checkbutton.dark {
   background-color: #160d2f;
 }
 
+notebook > header > tabs > tab:checked {
+  background-color: rgba(124, 92, 255, 0.25);
+  background-image: none;
+}
+
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
@@ -8497,5 +8502,6 @@ FIXME this is really an API */
 /* GTK NAMED COLORS
    ----------------
    use responsibly! */
+
 
 
