@@ -327,7 +327,7 @@ scrollbar slider {
 }
 
 .control-center .notification-row .notification-background .notification {
-  background-color: var(--kitty-bg);
+  background-color: rgba(6, 3, 13, 0.85);
   border: 2px solid rgba(127, 112, 255, 0.30);
   border-radius: var(--radius);
   padding: var(--padding);
