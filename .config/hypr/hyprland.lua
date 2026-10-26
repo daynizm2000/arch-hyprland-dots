@@ -1,3 +1,4 @@
+hl.env("GDK_WAYLAND_DISABLE", "ext_background_effect_manager_v1")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
 hl.env("GBM_BACKEND", "nvidia-drm")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
